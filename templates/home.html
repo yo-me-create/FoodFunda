@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--    google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!--    main css-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+
+
+    <!--    Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <title>FoodFunda</title>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand text-success logo-font" href="/home">FoodFunda</a>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item pr-4">
+                <a class="nav-link text-success" href="/home">Home</a>
+            </li>
+            <li class="nav-item pr-4">
+                <a class="nav-link text-success" href="#">Service</a>
+            </li>
+            <li class="nav-item pr-4">
+                <a class="nav-link text-success" href="#">Branch</a>
+            </li>
+            <li class="nav-item pr-4">
+                <a class="nav-link text-success" href="#">Contact us</a>
+            </li>
+        </ul>
+        <a class="btn btn-outline-success" href="/logout">Logout</a>
+    </div>
+</nav>
+<div class="home-main">
+    <div class="container card">
+
+        <div class="card-body text-center">
+            <div class="text-danger text-center pb-4">
+                <h1 class="f-name">Food Funda</h1>
+            </div>
+
+            <div class="pb-5">
+
+                <a href="/additem" class="btn btn-info mr-4 mt-2 ">Add item</a>
+                <a href="/display" class="btn btn-primary mr-4 mt-2">Show all item</a>
+                <a href="#" class="btn btn-success mt-2">Veg item</a>
+                <a href="#" class="btn btn-danger ml-4 mt-2">Non-veg item</a>
+            </div>
+        </div>
+        {%with messages = get_flashed_messages()%}
+
+        {%if messages%}
+
+        {% for message in messages %}
+
+        <div class="text-center alert alert-success alert-dismissable" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+
+                <span aria-hidden="true">&times;</span>
+
+            </button>
+            {{message}}
+
+
+        </div>
+
+
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+    </div>
+</div>
+
+
+<div class="bg-success">
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+

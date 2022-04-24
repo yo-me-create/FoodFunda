@@ -1,0 +1,64 @@
+
+/*Home page*/
+.home-main {
+    background-image: url("/static/images/food-2.jpg");
+    background-size: 100% 100%;
+    height: 697px;
+    background-size: cover;
+}
+
+
+/*Login Page*/
+.bg-login {
+    background-image: url("/static/images/bg_home.png");
+    background-size: 100% 100%;
+    height: 490px;
+    background-size: cover;
+    }
+
+/* Home Page and Additem Page */
+.logo-font {
+    font-family: 'Lobster', cursive;
+}
+
+/*Use multipage Home page, display page and additem */
+.f-name {
+    font-family: 'Lobster', cursive;
+    padding-top: 13px;
+    font-size: 9rem;
+
+}
+
+/* Use Display page and Additem page */
+.home-text {
+font-size: 3rem;
+}
+
+
+/* Use for Display page and Additem page */
+.home-text-big {
+font-size: 100px;
+}
+
+/* Use Login and Register Page */
+.btn-gr {
+background-color: #ADD100;
+}
+
+/* Use Login Page */
+.mt-180 {
+margin-top: 180px;
+}
+
+/* Use Register Page */
+.mt-50 {
+margin-top: 55px;
+}
+
+/* Use in Additem Page */
+.f-size {
+width: 30%;
+}
+
+
+
